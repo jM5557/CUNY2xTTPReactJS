@@ -1,26 +1,63 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import ContactCard from './ContactCardAssignment';
+import Decrement from './DecrementAssignment';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+	constructor (props) {
+
+		super(props);
+
+		this.state = {
+
+		}
+
+	}
+
+	render () {
+
+		return (
+
+			<div>
+
+				<ContactCard cardData = { {
+					name: "Javier Minchala",
+					email: "javierminchala@gmail.com",
+					phone: {
+						mobile: "555-555-5555",
+						work: "347-123-45678"
+					}
+				} } />
+
+				<ContactCard cardData = { {
+					name: "John Smith",
+					email: "smith.john@gmail.com",
+					phone: {
+						mobile: "718-164-3756",
+						work: "347-134-2212"
+					}
+				} } />
+
+				<ContactCard cardData = { {
+					name: "Jane Doe",
+					email: "jdoe98@gmail.com",
+					phone: {
+						mobile: "347-125-5555"
+					}
+				} } />
+
+				<div>
+
+					<Decrement num = { 10 } />
+
+				</div>
+
+			</div>
+
+		);
+
+	}
+
 }
 
 export default App;
